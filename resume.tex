@@ -88,7 +88,7 @@
     \item
     \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -98,8 +98,10 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=1pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=1pt, topsep=3pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeExperienceItemListStart}{\begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=1pt, topsep=3pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{1pt}}
 \newcommand{\resumeExperienceItemListEnd}{\end{itemize}\vspace{4pt}}
 
 %-------------------------------------------
@@ -175,23 +177,23 @@
     \resumeSubHeadingListStart
       \resumeProjectHeading
           {\textbf{Research Project, Efficient Attention Mechanisms (Carnegie Mellon University)} \href{https://arxiv.org/abs/2508.12594}{\underline{(link)}}}{Aug 2025 - Present}
-          \resumeItemListStart
+          \resumeProjectItemListStart
             \resumeItem{Validated $>200\times$ speedups and sub-quadratic memory scaling for linear attention mechanisms, by implementing and benchmarking on Long Range Arena tasks at 1k--8k token sequence lengths}
             \resumeItem{Profiled multi-GPU training with NCCL across FP8/BF16 configurations using Nsight Systems on Slurm-managed clusters, identifying optimal precision-performance tradeoffs for attention variants}
             \resumeItem{Authored and submitted a research paper to ICML 2026, demonstrating runtime, memory, and accuracy tradeoffs across 5+ efficient attention architectures benchmarked on vision and diffusion tasks}
-          \resumeItemListEnd
+          \resumeProjectItemListEnd
       \resumeProjectHeading
           {\textbf{CT-Transformer, Vision Transformers (Carnegie Mellon University)}}{Sep 2025 - Dec 2025}
-          \resumeItemListStart
+          \resumeProjectItemListStart
             \resumeItem{Achieved 96.22\% macro AUC-ROC on 15-class VinBigData chest X-ray classification outperforming ResNet-50, EfficientNet-B3, and ViT baselines, by training a Swin Transformer scaled to 210M parameters with fused attention kernels}
             \resumeItem{Optimized inference latency by $3\times$ over PyTorch eager execution, by converting trained models to TensorRT (FP16/INT8), accelerating preprocessing with DALI, and deploying on Triton Inference Server with adaptive request batching}
-          \resumeItemListEnd
+          \resumeProjectItemListEnd
       \resumeProjectHeading
           {\textbf{Distributed LLM Fine-Tuning with Megatron-LM (Carnegie Mellon University)}}{Aug 2025 - Oct 2025}
-          \resumeItemListStart
+          \resumeProjectItemListStart
             \resumeItem{Fine-tuned a 7B parameter LLM with stable convergence and \textasciitilde40\% reduced memory footprint on $4\times$ H100 GPUs, by configuring tensor and pipeline parallelism with NCCL-backed communication, gradient checkpointing, and using LoRA/QLoRA adapters}
             \resumeItem{Achieved $2.1\times$ training throughput improvement over naive data parallelism, by tuning NCCL parameters, gradient bucketing, and optimizer state sharding across GPUs}
-          \resumeItemListEnd
+          \resumeProjectItemListEnd
     \resumeSubHeadingListEnd
 
 %-------------------------------------------
