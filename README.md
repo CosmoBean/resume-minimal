@@ -1,2 +1,2 @@
-# resume-minimal
-minimal resume and master CV pipeline
+# Sri Datta Ganesh Bandreddi Resume
+LaTeX source for Sri Datta Ganesh Bandreddi's personal resume.
