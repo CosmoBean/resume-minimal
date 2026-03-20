@@ -11,4 +11,4 @@ Build with:
 make
 ```
 
-The compiled PDF is written to [output/resume.pdf](./output/resume.pdf).
+output can also be found at [link](https://cosmobean.github.io/resume-minimal/)
