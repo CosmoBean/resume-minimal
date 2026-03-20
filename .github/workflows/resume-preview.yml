@@ -1,0 +1,81 @@
+# Builds resume.tex and deploys a PDF preview to GitHub Pages on every push to main.
+# Repo settings → Pages → Build and deployment → Source: GitHub Actions.
+
+name: Resume preview (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            make \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra
+
+      - name: Build PDF
+        run: make
+
+      - name: Prepare static site
+        run: |
+          mkdir -p site
+          cp output/resume.pdf site/resume.pdf
+          cat > site/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Resume preview</title>
+            <style>
+              body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; color: #eee; }
+              .bar { padding: 0.5rem 1rem; background: #2d2d2d; border-bottom: 1px solid #444; }
+              .bar a { color: #7cb8ff; }
+              iframe { width: 100%; height: calc(100vh - 2.5rem); border: 0; display: block; background: #525252; }
+            </style>
+          </head>
+          <body>
+            <div class="bar">
+              <a href="resume.pdf">Download resume.pdf</a>
+              <span style="opacity:0.6;margin-left:1rem">Built from <code>main</code></span>
+            </div>
+            <iframe src="resume.pdf" title="Resume PDF"></iframe>
+          </body>
+          </html>
+          HTML
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
