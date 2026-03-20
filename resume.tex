@@ -20,6 +20,22 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
+% ---------- Vertical rhythm (single source of truth) ----------
+\newcommand{\resumespaceaftersection}{1pt}
+\newcommand{\resumespaceoutertop}{2pt}
+\newcommand{\resumespacebeforesubhead}{-2pt}
+\newcommand{\resumespaceafterhead}{-5pt}
+\newcommand{\resumespaceinitem}{-2pt}
+\newcommand{\resumespaceaftersubitem}{-4pt}
+\newcommand{\resumeitemsep}{1pt}
+\newcommand{\resumetopsepstd}{1pt}
+\newcommand{\resumetopsepdetail}{3pt}
+\newcommand{\resumespaceafterbullets}{-5pt}
+\newcommand{\resumespaceafterproject}{1pt}
+\newcommand{\resumespaceafterexperience}{4pt}
+\newcommand{\resumesmallgap}{1pt}
+\newcommand{\resumeskillsgap}{2pt}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
@@ -43,7 +59,7 @@
 \titleformat{\section}{
   \scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule]
-\titlespacing*{\section}{0pt}{0pt}{1pt}
+\titlespacing*{\section}{0pt}{0pt}{\resumespaceaftersection}
 
 % Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -55,25 +71,23 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1 \vspace{\resumespaceinitem}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{\resumespacebeforesubhead}\item
     \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{\resumespaceafterhead}
 }
 
 \newcommand{\resumeExperienceSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{\resumespacebeforesubhead}\item
     \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{\resumespaceafterhead}
 }
 
 \newcommand{\resumeEducationSubheading}[4]{
@@ -88,21 +102,25 @@
     \item
     \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{\resumespaceafterhead}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{\resumespaceaftersubitem}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[leftmargin=0in, label={}, itemsep=\resumeitemsep, topsep=\resumespaceoutertop, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=1pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
-\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=1pt, topsep=3pt, parsep=0pt, partopsep=0pt]}
-\newcommand{\resumeExperienceItemListStart}{\begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=1pt, topsep=3pt, parsep=0pt, partopsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{1pt}}
-\newcommand{\resumeExperienceItemListEnd}{\end{itemize}\vspace{4pt}}
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=\resumeitemsep, topsep=\resumetopsepstd, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeProjectItemListStart}{%
+  \begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=\resumeitemsep, topsep=\resumetopsepdetail, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeExperienceItemListStart}{%
+  \begin{itemize}[leftmargin=1.1em, labelsep=0.35em, itemsep=\resumeitemsep, topsep=\resumetopsepdetail, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{\resumespaceafterbullets}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{\resumespaceafterproject}}
+\newcommand{\resumeExperienceItemListEnd}{\end{itemize}\vspace{\resumespaceafterexperience}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,7 +128,7 @@
 \begin{document}
 
 \begin{center}
-    \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{2pt}
+    \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{\resumeskillsgap}
     \small \href{mailto:sbandred@andrew.cmu.edu}{\underline{sbandred@andrew.cmu.edu}}
     \textbullet\ (412) 284-8386 \textbullet\
     \href{http://linkedin.com/in/sri-datta-bandreddi}{\underline{linkedin.com/in/sri-datta-bandreddi}}
@@ -123,7 +141,7 @@
     \resumeEducationSubheading
       {CARNEGIE MELLON UNIVERSITY}{Pittsburgh, PA}
       {Master of Science in AI Engineering, Biomedical Engineering $|$ GPA: 4.00/4.00}{Dec 2026}
-    \vspace{1pt}
+    \vspace{\resumesmallgap}
     \resumeEducationSubheading
       {VISVESVARAYA NATIONAL INSTITUTE OF TECHNOLOGY}{Nagpur, India}
       {Bachelor of Technology, Mechanical Engineering $|$ GPA: 8.44/10.00}{Jul 2022}
@@ -139,12 +157,13 @@
 \textbf{Systems \& MLOps:} Docker, Kubernetes, Slurm, Jenkins/GitHub Actions, MLflow, Git, AWS (ECS, SageMaker), GCP \\
 \textbf{Data Infrastructure:} PostgreSQL, Neo4j, Kafka, Redis, Iceberg, Elasticsearch, FAISS, MongoDB
 \par}
-\vspace{2pt}
+\vspace{\resumeskillsgap}
 
 %-----------EXPERIENCE-----------
 \section{PROFESSIONAL EXPERIENCE}
+\vspace{\resumesmallgap}
   \resumeSubHeadingListStart
-    \vspace{1pt}
+    \vspace{\resumesmallgap}
     \resumeExperienceSubheading
       {PHENOM}{Hyderabad, India}
       {Product Development Engineer (Enterprise Graph Team)}{Dec 2023 - Jul 2025}
