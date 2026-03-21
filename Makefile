@@ -3,10 +3,14 @@ SRC := resume.tex
 OUT_DIR := output
 PDF := $(OUT_DIR)/resume.pdf
 TEX_FLAGS := -interaction=nonstopmode -halt-on-error -output-directory=$(OUT_DIR)
+PNG_SCRIPT := scripts/export_resume_png.py
 
-.PHONY: all clean
+.PHONY: all clean png
 
 all: $(PDF)
+
+png: $(PDF)
+	python3 $(PNG_SCRIPT)
 
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)

@@ -1,0 +1,54 @@
+# Builds output/resume.pdf, rasterizes it to docs/resume-preview.png, and commits
+# the PNG when it changes. Commit message includes [skip ci] to avoid workflow loops.
+
+name: Resume README preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "resume.tex"
+      - "Makefile"
+      - ".github/workflows/resume-readme-preview.yml"
+      - "scripts/export_resume_png.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX Live, Poppler, Pillow
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            make \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            poppler-utils \
+            python3-pil
+
+      - name: Build PDF
+        run: make
+
+      - name: Export PNG for README
+        run: python3 scripts/export_resume_png.py
+
+      - name: Commit and push if PNG changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/resume-preview.png
+          if git diff --staged --quiet; then
+            echo "No changes to resume preview PNG."
+          else
+            git commit -m "chore: refresh resume README preview [skip ci]"
+            git push
+          fi
