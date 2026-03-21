@@ -18,8 +18,9 @@ make
 output can also be found at [link](https://cosmobean.github.io/resume-minimal/)
 
 
-Regenerate the README preview image locally (requires Poppler and Pillow, e.g. `poppler-utils` and `python3-pil`):
+Regenerate the README preview image locally: install Poppler (`pdftoppm`, e.g. `poppler-utils` on Debian/Ubuntu) and Python packages from [scripts/requirements.txt](./scripts/requirements.txt):
 
 ```bash
+pip install -r scripts/requirements.txt
 make png
 ```
