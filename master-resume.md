@@ -254,12 +254,12 @@
 
 ---
 
-### TartanHacks: Track Winner, Sub-15 KB Game (CMU)
-**Early 2026**
+### TartanHacks: 2nd Place, AppLovin Track (CMU)
+**Feb 6–7, 2026**
 
 **Bullets:**
-- Won a track at **TartanHacks** (CMU's flagship hackathon) for a playable game about CMU that fit in **under 15 KB total**, squeezing the game logic and assets into an extreme size budget. `[hackathon] [award] [optimization]`
-- [[INTERVIEW: team size, your specific role, tech/language used, track name, link/repo]]
+- Placed **2nd in the AppLovin track** at **TartanHacks** (CMU's flagship hackathon) for a playable game about CMU that fit in **under 15 KB total**, squeezing the game logic and assets into an extreme size budget. `[hackathon] [award] [optimization]`
+- [[INTERVIEW: team size, your specific role, tech/language used, link/repo]]
 
 **Tags:** hackathon, award, optimization, frontend
 
@@ -389,7 +389,7 @@
 ## Awards, Honors & Certifications
 - **Phenomenal Award for Outstanding Performance, Phenom, Hyderabad (2024):** for standout contributions in Q1 and Q2 on the Enterprise Talent Graph team.
 - Perfect 4.00/4.00 GPA at CMU (usable as an honors line).
-- **TartanHacks track winner (early 2026):** sub-15 KB game about CMU.
+- **TartanHacks, 2nd place in the AppLovin track (Feb 2026):** sub-15 KB game about CMU.
 - [[INTERVIEW: scholarships, competition wins, other GPA honors, certifications (AWS/GCP/NVIDIA DLI?), rankings]]
 
 ## Patents
