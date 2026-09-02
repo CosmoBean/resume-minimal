@@ -32,7 +32,7 @@
 \newcommand{\resumetopsepdetail}{3pt}
 \newcommand{\resumespaceafterbullets}{-5pt}
 \newcommand{\resumespaceafterproject}{1pt}
-\newcommand{\resumespaceafterexperience}{4pt}
+\newcommand{\resumespaceafterexperience}{0pt}
 \newcommand{\resumesmallgap}{1pt}
 \newcommand{\resumeskillsgap}{2pt}
 
@@ -141,11 +141,11 @@
   \resumeSubHeadingListStart
     \resumeEducationSubheading
       {CARNEGIE MELLON UNIVERSITY}{Pittsburgh, PA}
-      {Master of Science in AI Engineering, Biomedical Engineering $|$ GPA: 4.00/4.00}{Dec 2026}
+      {Master of Science in AI Engineering, Biomedical Engineering $|$ \textup{GPA: 4.00/4.00}}{Dec 2026}
     \vspace{\resumesmallgap}
     \resumeEducationSubheading
       {VISVESVARAYA NATIONAL INSTITUTE OF TECHNOLOGY}{Nagpur, India}
-      {Bachelor of Technology, Mechanical Engineering $|$ GPA: 8.44/10.00}{Jul 2022}
+      {Bachelor of Technology, Mechanical Engineering $|$ \textup{GPA: 8.44/10.00}}{Jul 2022}
   \resumeSubHeadingListEnd
 
 %-----------SKILLS-----------
@@ -169,16 +169,16 @@
       {MOTIONAL}{Pittsburgh, PA}
       {Data Platform Intern (Infrastructure)}{May 2026 - Aug 2026}
       \resumeExperienceItemListStart
-        \resumeItem{Enabled teams to understand petabyte-scale drivelog data before thawing it, by designing and shipping a metadata-extraction system end to end (staging PoC through production design) on a medallion architecture}
-        \resumeItem{Enabled fast scene-metadata retrieval and earned a provisional patent, by building a geospatial indexing scheme (H3) and scene embeddings for similarity search}
-        \resumeItem{Shipped natural-language drivelog search and selected the production data stack, by building an agentic LangGraph layer on a FastAPI backend and benchmarking Ray Data against Spark on Kubernetes}
+        \resumeItem{Enabled characterization of petabyte-scale drivelog data before thawing, by architecting and delivering a metadata-extraction system from PoC to production on a medallion architecture}
+        \resumeItem{Accelerated scene-metadata retrieval and earned a provisional patent, by building an H3 geospatial index and scene embeddings for similarity search}
+        \resumeItem{Delivered natural-language drivelog search and selected the production stack, by building an agentic LangGraph service on FastAPI and benchmarking Ray Data against Spark on Kubernetes}
       \resumeExperienceItemListEnd
 
     \resumeExperienceSubheading
       {PHENOM}{Hyderabad, India}
       {Product Development Engineer (Enterprise Talent Graph)}{Dec 2023 - Jul 2025}
       \resumeExperienceItemListStart
-        \resumeItem{Improved scalability and reliability of a multi-tenant AI analytics platform under heavy concurrent load, by leading six engineers to refactor shared services and cut cross-tenant coupling}
+        \resumeItem{Hardened a multi-tenant AI analytics platform for reliability under concurrent load, by leading six engineers to refactor shared services and reduce cross-tenant coupling}
         \resumeItem{Scaled a production knowledge graph past 1M entities with continuous ingestion, by designing validated aggregation pipelines on Neo4j schemas and Iceberg versioned storage}
         \resumeItem{Cut AI-driven query response time by 40\% across 100+ clients, by tuning PostgreSQL sharding and hardening the Kafka platform (custom exporter, Kafka UI, ZooKeeper-to-KRaft migration)}
       \resumeExperienceItemListEnd
@@ -187,7 +187,7 @@
       {BYJU'S}{Hyderabad, India}
       {Software Engineer (Core Platform Team)}{Jul 2022 - Dec 2023}
       \resumeExperienceItemListStart
-        \resumeItem{Cut infrastructure costs by 70\% for 1M+ users, by deploying scheduled AWS ECS auto-scaling and Terraform IaC tuned to real traffic patterns}
+        \resumeItem{Cut infrastructure costs by 70\% for 1M+ users, by deploying scheduled AWS ECS auto-scaling and Terraform IaC tuned to traffic patterns}
         \resumeItem{Halved reliance on external identity providers, by leading development of an in-house auth platform (SAML, SSO, RBAC) in Go and Java (Spring Boot)}
       \resumeExperienceItemListEnd
 
@@ -207,7 +207,7 @@
           {\textbf{FLARE: Efficient Attention (Carnegie Mellon University)} \href{https://arxiv.org/abs/2508.12594}{\underline{(link)}}}{Aug 2025 - Present}
           \resumeProjectItemListStart
             \resumeItem{Co-authored a linear-attention operator (3rd of 7 authors, submitted to TMLR) later adopted by an NVIDIA and General Motors crash-dynamics effort for roughly 2x lower memory}
-            \resumeItem{Demonstrated over 200x speedups on Long Range Arena (1k to 8k tokens), by benchmarking and profiling multi-GPU NCCL training across FP8/BF16 with Nsight Systems, and extended FLARE to image classification and diffusion}
+            \resumeItem{Demonstrated over 200x speedups on Long Range Arena and extended FLARE to image classification and diffusion, by profiling multi-GPU NCCL training across FP8/BF16 with Nsight Systems}
           \resumeProjectItemListEnd
       \resumeProjectHeading
           {\textbf{Distributed LLM Fine-Tuning with Megatron-LM (Carnegie Mellon University)}}{Aug 2025 - Oct 2025}
@@ -222,6 +222,12 @@
             \resumeItem{Cut inference latency by 3x versus PyTorch eager, by converting to TensorRT (FP16/INT8), accelerating preprocessing with DALI, and serving on Triton with adaptive batching}
           \resumeProjectItemListEnd
     \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{AWARDS \& HONORS}
+{\small
+\noindent Phenomenal Award for Outstanding Performance, Phenom (2024, Q1 \& Q2) \textbullet\ 2nd Place, AppLovin Track, TartanHacks 2026 \textbullet\ Provisional Patent, Motional (2026)
+\par}
 
 %-------------------------------------------
 \end{document}
