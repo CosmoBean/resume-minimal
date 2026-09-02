@@ -75,7 +75,7 @@
 ## Professional Experience
 
 ### Motional, Data Platform Intern (Infrastructure)
-**May 2026 – Aug 2026 · [[INTERVIEW: location, Pittsburgh / Boston / remote?]]**
+**Pittsburgh, PA · May 2026 – Aug 2026**
 
 **Scope / context:** Data Platform team within the Infrastructure org at an autonomous-vehicle (AV) company. The work was about learning what is inside AV drivelogs before extracting the full log. Each drivelog is about 1 TB and the full corpus reaches petabyte scale, so cheap up-front characterization avoids massive extraction cost.
 
