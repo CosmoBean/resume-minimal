@@ -5,6 +5,8 @@ Adapted from [sb2nov/resume](https://github.com/sb2nov/resume/).
 
 The source of truth is [resume.tex](./resume.tex).
 
+**Download:** [Sri Datta's Resume.pdf](./Sri%20Datta's%20Resume.pdf) (regenerate with `make release`).
+
 ## Preview
 
 ![Rendered resume](docs/resume-preview.png)
