@@ -77,10 +77,10 @@
 ### Motional, Data Platform Intern (Infrastructure)
 **Pittsburgh, PA · May 2026 – Aug 2026**
 
-**Scope / context:** Data Platform team within the Infrastructure org at an autonomous-vehicle (AV) company. The work was about learning what is inside AV drivelogs before extracting the full log. Each drivelog is about 1 TB and the full corpus reaches petabyte scale, so cheap up-front characterization avoids massive extraction cost.
+**Scope / context:** Data Platform team within the Infrastructure org at an autonomous-vehicle (AV) company. The work was about learning what is inside AV drivelogs before thawing the full log. The drivelog corpus is petabyte scale, so cheap up-front characterization avoids costly thaws.
 
 **Impact bullets:**
-- Designed, prototyped, and shipped a metadata-extraction system so teams could learn what is inside a drivelog (about 1 TB each, petabytes in total) before paying to extract the whole thing. Delivered a working PoC in staging and authored the production design. `[data-eng] [architecture] [scale]`
+- Designed, prototyped, and shipped a metadata-extraction system so teams could understand petabyte-scale drivelog data before thawing it. Delivered a working PoC in staging and authored the production design. `[data-eng] [architecture] [scale]`
 - Built the production system on a **medallion architecture** so it could grow into a reusable, first-class data product. `[data-eng] [architecture]`
 - Enriched drivelogs with weather and map layers, then used **H3 geospatial indexing** to roll up metrics across regions. `[data-eng] [geospatial]`
 - Made scene-metadata retrieval fast with a new geospatial indexing scheme, and indexed scenes as embeddings for similarity search. Filed a **provisional patent** on the approach. `[research] [geospatial] [ml] [patent]`
@@ -368,7 +368,7 @@
 - Other research / leadership roles: [[INTERVIEW]]
 
 ### Visvesvaraya National Institute of Technology (VNIT), Nagpur, India
-**B.Tech, Mechanical Engineering · GPA 8.44/10.00 (Scholaro-scaled 3.63/4.00) · Jul 2022**
+**B.Tech, Mechanical Engineering · GPA 8.44/10.00 · Jul 2022**
 - Coursework: Artificial Intelligence in Manufacturing, Industrial Robotics, Manufacturing Process Automation, Computer Graphics & Solid Modelling, Data Structures, Finite Element Method, Biomechanics, Advanced Mechanism, Machine System Design, Theory of Machines I & II, Manufacturing Process I & II, Machine Design I & II.
 - Notable projects: **B.Tech capstone, Comparative FEA of Palatal Expansion Devices** (first author; presented at ICMAE 2022, Bratislava). See Projects/Publications.
 - *(Transcript and GPA-conversion docs available on request; Drive links on file.)*
@@ -454,7 +454,7 @@
 | 1M+ entities | Knowledge graph scale (Phenom) | ⚠ VERIFY |
 | 1M+ users | BYJU'S platform | ⚠ VERIFY |
 | 100+ enterprise clients | Phenom Enterprise Talent Graph | ⚠ VERIFY |
-| about 1 TB per drivelog / petabyte corpus | Motional AV drivelogs | ⚠ VERIFY |
+| petabyte-scale drivelog corpus | Motional AV drivelogs | ⚠ VERIFY |
 | about $100K saved | BYJU'S comms reconciliation | ⚠ VERIFY |
 | Survived 7 layoff rounds | BYJU'S (criticality signal) | ⚠ VERIFY |
 | Admin over 5 repos as a fresher | BYJU'S ownership | ⚠ VERIFY |
