@@ -129,10 +129,11 @@
 
 \begin{center}
     \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{\resumeskillsgap}
-    \small \href{mailto:sbandred@andrew.cmu.edu}{\underline{sbandred@andrew.cmu.edu}}
+    \small \href{mailto:cosmobean@cmu.edu}{\underline{cosmobean@cmu.edu}}
     \textbullet\ (412) 284-8386 \textbullet\
     \href{http://linkedin.com/in/sri-datta-bandreddi}{\underline{linkedin.com/in/sri-datta-bandreddi}}
-    \textbullet\ \href{https://cosmobean.dev}{\underline{https://cosmobean.dev}}
+    \textbullet\ \href{https://github.com/CosmoBean}{\underline{github.com/CosmoBean}}
+    \textbullet\ \href{https://cosmobean.dev}{\underline{cosmobean.dev}}
 \end{center}
 
 %-----------EDUCATION-----------
@@ -144,7 +145,7 @@
     \vspace{\resumesmallgap}
     \resumeEducationSubheading
       {VISVESVARAYA NATIONAL INSTITUTE OF TECHNOLOGY}{Nagpur, India}
-      {Bachelor of Technology, Mechanical Engineering $|$ GPA: 8.44/10.00}{Jul 2022}
+      {Bachelor of Technology, Mechanical Engineering $|$ GPA: 8.44/10.00 (Scholaro 3.63/4.00)}{Jul 2022}
   \resumeSubHeadingListEnd
 
 %-----------SKILLS-----------
@@ -165,29 +166,37 @@
   \resumeSubHeadingListStart
     \vspace{\resumesmallgap}
     \resumeExperienceSubheading
-      {PHENOM}{Hyderabad, India}
-      {Product Development Engineer (Enterprise Graph Team)}{Dec 2023 - Jul 2025}
+      {MOTIONAL}{Pittsburgh, PA}
+      {Data Platform Intern (Infrastructure)}{May 2026 - Aug 2026}
       \resumeExperienceItemListStart
-        \resumeItem{Led a team of six engineers to re-architect a multi-tenant AI analytics platform, enhancing scalability and reliability under concurrent tenant load by refactoring shared services and reducing cross-tenant coupling}
-        \resumeItem{Scaled production knowledge graph to 1M+ entities with continuous ingestion, by designing validated aggregation pipelines integrated with Neo4j graph schemas and Iceberg versioned storage}
-        \resumeItem{Ensured high availability for production workloads serving 100+ enterprise clients, by managing distributed Kafka, PostgreSQL, and Redis clusters and building CI/CD pipelines using Jenkins and Helm charts on Kubernetes}
-        \resumeItem{Accelerated AI-driven query response times by 40\% across 100+ clients, by tuning PostgreSQL horizontal sharding strategies}
+        \resumeItem{Designed, prototyped, and shipped a metadata-extraction system so teams could learn what is inside an autonomous-vehicle drivelog (about 1 TB each, petabytes in total) before paying to extract the whole thing, delivering a staging PoC and the production design on a medallion architecture}
+        \resumeItem{Made scene-metadata retrieval fast with a new geospatial indexing scheme (H3) and scene embeddings for similarity search, and filed a provisional patent on the approach}
+        \resumeItem{Added an agentic LangGraph layer for natural-language drivelog retrieval behind a FastAPI backend, and benchmarked Ray Data against Spark on Kubernetes to pick the production stack}
+      \resumeExperienceItemListEnd
+
+    \resumeExperienceSubheading
+      {PHENOM}{Hyderabad, India}
+      {Product Development Engineer (Enterprise Talent Graph)}{Dec 2023 - Jul 2025}
+      \resumeExperienceItemListStart
+        \resumeItem{Led six engineers to re-architect a multi-tenant AI analytics platform, refactoring shared services and cutting cross-tenant coupling so it held up under heavy concurrent load}
+        \resumeItem{Grew a production knowledge graph past 1M entities with continuous ingestion, designing validated aggregation pipelines on Neo4j schemas and Iceberg versioned storage}
+        \resumeItem{Owned the Kafka platform (custom exporter, Prometheus scraping, Kafka UI, ZooKeeper-to-KRaft migration) and sped up AI-driven query responses by 40\% across 100+ clients by tuning PostgreSQL sharding}
       \resumeExperienceItemListEnd
 
     \resumeExperienceSubheading
       {BYJU'S}{Hyderabad, India}
       {Software Engineer (Core Platform Team)}{Jul 2022 - Dec 2023}
       \resumeExperienceItemListStart
-        \resumeItem{Cut infrastructure costs by 70\% while maintaining reliability for 1M+ users, by deploying scheduled AWS ECS auto-scaling policies and maintaining Infrastructure-as-Code (IaC) configurations based on user traffic patterns}
-        \resumeItem{Eliminated dependency on external identity services by 50\%, by leading development of an in-house authentication and authorization platform using Go and Java (Spring Boot)}
+        \resumeItem{Cut infrastructure costs by 70\% while keeping 1M+ users well served, deploying scheduled AWS ECS auto-scaling and Terraform IaC tuned to real traffic patterns}
+        \resumeItem{Halved reliance on external identity services by leading development of an in-house auth platform (SAML, SSO, RBAC) in Go and Java (Spring Boot)}
       \resumeExperienceItemListEnd
 
     \resumeExperienceSubheading
       {PHENOM}{Hyderabad, India}
-      {Intern (Machine Learning)}{May 2021 - Jun 2022}
+      {Machine Learning Intern}{May 2021 - Jun 2022}
       \resumeExperienceItemListStart
-        \resumeItem{Boosted recommendation accuracy by building persona classification models using NLP techniques (spaCy, BERT embeddings) across 3 data sources, processing user behavioral signals at scale to serve personalized content for production recommendation pipelines}
-        \resumeItem{Accelerated recommender system feature preprocessing by migrating CPU-based data pipelines to NVTabular on GPU, reducing preprocessing latency and validating scalability improvements across 2 production databases}
+        \resumeItem{Lifted recommendation accuracy by building persona-classification models with spaCy and BERT embeddings across 3 data sources for production recommendation pipelines}
+        \resumeItem{Made recommender preprocessing much faster by moving CPU pipelines to NVTabular on GPU, cutting latency across 2 production databases}
       \resumeExperienceItemListEnd
   \resumeSubHeadingListEnd
 
@@ -195,29 +204,22 @@
 \section{PROJECT EXPERIENCE}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Research Project, Efficient Attention Mechanisms (Carnegie Mellon University)} \href{https://arxiv.org/abs/2508.12594}{\underline{(link)}}}{Aug 2025 - Present}
+          {\textbf{FLARE: Efficient Attention (Carnegie Mellon University)} \href{https://arxiv.org/abs/2508.12594}{\underline{(link)}}}{Aug 2025 - Present}
           \resumeProjectItemListStart
-            \resumeItem{Validated $>200\times$ speedups and sub-quadratic memory scaling for linear attention mechanisms, by implementing and benchmarking on Long Range Arena tasks at 1k--8k token sequence lengths}
-            \resumeItem{Profiled multi-GPU training with NCCL across FP8/BF16 configurations using Nsight Systems on Slurm-managed clusters, identifying optimal precision-performance tradeoffs for attention variants}
-            \resumeItem{Authored and submitted a research paper to ICML 2026, demonstrating runtime, memory, and accuracy tradeoffs across 5+ efficient attention architectures benchmarked on vision and diffusion tasks}
-          \resumeProjectItemListEnd
-      \resumeProjectHeading
-          {\textbf{CT-Transformer, Vision Transformers (Carnegie Mellon University)}}{Sep 2025 - Dec 2025}
-          \resumeProjectItemListStart
-            \resumeItem{Achieved 96.22\% macro AUC-ROC on 15-class VinBigData chest X-ray classification outperforming ResNet-50, EfficientNet-B3, and ViT baselines, by training a Swin Transformer scaled to 210M parameters with fused attention kernels}
-            \resumeItem{Optimized inference latency by $3\times$ over PyTorch eager execution, by converting trained models to TensorRT (FP16/INT8), accelerating preprocessing with DALI, and deploying on Triton Inference Server with adaptive request batching}
-          \resumeProjectItemListEnd
-      \resumeProjectHeading
-          {\textbf{EMG Hand Gesture Recognition, Neural Networks (Carnegie Mellon University)}}{Sep 2025 - Oct 2025}
-          \resumeProjectItemListStart
-            \resumeItem{Designed neural network models for EMG-based hand gesture classification, achieving 85--92\% accuracy on 16-channel, 1000~Hz signals, using PyTorch LSTM/CNN architectures with attention mechanisms}
-            \resumeItem{Performed controlled ablation studies across CNN, LSTM, and attention-based architectures, validating results over subject-wise splits and multi-channel EMG configurations to identify generalizable inductive biases}
+            \resumeItem{Co-authored a linear-attention operator (3rd of 7 authors, submitted to TMLR) later picked up by an NVIDIA and General Motors crash-dynamics effort for roughly 2x lower memory}
+            \resumeItem{Showed over 200x speedups on Long Range Arena (1k to 8k tokens), profiled multi-GPU NCCL training across FP8/BF16 with Nsight Systems, and took FLARE into image classification and diffusion}
           \resumeProjectItemListEnd
       \resumeProjectHeading
           {\textbf{Distributed LLM Fine-Tuning with Megatron-LM (Carnegie Mellon University)}}{Aug 2025 - Oct 2025}
           \resumeProjectItemListStart
-            \resumeItem{Fine-tuned a 7B parameter LLM with stable convergence and \textasciitilde40\% reduced memory footprint on $4\times$ H100 GPUs, by configuring tensor and pipeline parallelism with NCCL-backed communication, gradient checkpointing, and using LoRA/QLoRA adapters}
-            \resumeItem{Achieved $2.1\times$ training throughput improvement over naive data parallelism, by tuning NCCL parameters, gradient bucketing, and optimizer state sharding across GPUs}
+            \resumeItem{Fine-tuned a 7B-parameter LLM to stable convergence with about 40\% less memory on four H100 GPUs using tensor and pipeline parallelism, gradient checkpointing, and LoRA/QLoRA adapters}
+            \resumeItem{Pushed training throughput to 2.1x over naive data parallelism by tuning NCCL, gradient bucketing, and optimizer-state sharding}
+          \resumeProjectItemListEnd
+      \resumeProjectHeading
+          {\textbf{CT-Transformer, Vision Transformers (Carnegie Mellon University)}}{Sep 2025 - Dec 2025}
+          \resumeProjectItemListStart
+            \resumeItem{Hit 96.22\% macro AUC-ROC on 15-class VinBigData chest X-ray classification, beating ResNet-50, EfficientNet-B3, and ViT baselines with a 210M-parameter Swin Transformer}
+            \resumeItem{Sped up inference 3x over PyTorch eager by converting to TensorRT (FP16/INT8), speeding preprocessing with DALI, and serving on Triton with adaptive batching}
           \resumeProjectItemListEnd
     \resumeSubHeadingListEnd
 
