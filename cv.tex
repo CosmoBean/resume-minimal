@@ -1,0 +1,259 @@
+%-------------------------
+% Full CV (generated from master-resume.md)
+% Author : Sri Datta Ganesh Bandreddi
+% Adapted from: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+\hypersetup{
+  pdftitle={Sri Datta Ganesh Bandreddi CV},
+  pdfauthor={Sri Datta Ganesh Bandreddi}
+}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.28in, itemsep=1pt, topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{2pt}
+    \small \href{mailto:cosmobean@cmu.edu}{\underline{cosmobean@cmu.edu}}
+    \textbullet\ (412) 284-8386 \textbullet\
+    \href{http://linkedin.com/in/sri-datta-bandreddi}{\underline{linkedin.com/in/sri-datta-bandreddi}} \\ \vspace{2pt}
+    \href{https://github.com/CosmoBean}{\underline{github.com/CosmoBean}}
+    \textbullet\ \href{https://cosmobean.dev}{\underline{cosmobean.dev}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carnegie Mellon University}{Pittsburgh, PA}
+      {M.S. in AI Engineering (Biomedical Engineering) $|$ GPA: 4.00/4.00}{Expected Dec 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Coursework:} Introduction to Deep Learning (24-788), Learning for 3D Vision, AI and IoT.}
+        \resumeItem{\textbf{Teaching Assistant} --- ``AI and IoT''; built teaching material including an IoT VLM Colab notebook.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Visvesvaraya National Institute of Technology (VNIT)}{Nagpur, India}
+      {B.Tech, Mechanical Engineering $|$ GPA: 8.44/10.00 (Scholaro-scaled 3.63/4.00)}{Jul 2022}
+      \resumeItemListStart
+        \resumeItem{\textbf{Coursework:} AI in Manufacturing, Industrial Robotics, Manufacturing Process Automation, Computer Graphics \& Solid Modelling, Data Structures, Finite Element Method, Biomechanics, Machine Design.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+{\small
+\noindent \textbf{Languages:} Python, C++, Go, Java, SQL, Bash / Shell scripting \\
+\textbf{GPU / Acceleration:} CUDA, cuDNN, cuBLAS, TensorRT, Triton Inference Server, NCCL, Nsight Systems/Compute \\
+\textbf{LLM / Agents:} LangGraph, LangChain, RAG, agentic tool-calling, FastAPI (serving) \\
+\textbf{DL Frameworks:} PyTorch, JAX, TensorFlow, Hugging Face, NeMo / Megatron-LM, LoRA / QLoRA, FP8 / BF16 mixed precision \\
+\textbf{Data \& Big Data:} RAPIDS (cuDF, cuML), NVTabular, DALI, NumPy, SciPy, Pandas, SparkML, Ray, Apache Spark, H3, medallion architecture \\
+\textbf{Systems \& MLOps / IaC:} Docker, Kubernetes, Slurm, Terraform, Bazel, Jenkins / GitHub Actions, Helm, MLflow, Git, SonarQube \\
+\textbf{Cloud:} AWS (ECS, SageMaker, S3, RDS, KMS, EventBridge), GCP \\
+\textbf{Databases:} PostgreSQL, Citus, Neo4j, memgraph, JanusGraph, MongoDB, Cassandra, ScyllaDB, Redis, Valkey, Kafka, Iceberg, Elasticsearch, FAISS \\
+\textbf{Security \& Observability:} Prometheus, OpenReplay, AWS KMS / encryption-at-rest, BYOK, GDPR, SAML / SSO / RBAC / OAuth \\
+\textbf{Frontend:} ReactJS, Next.js
+\par}
+
+%-----------EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Motional}{Data Platform Intern (Infrastructure)}
+      {Autonomous-vehicle data platform}{May 2026 -- Aug 2026}
+      \resumeItemListStart
+        \resumeItem{Designed, prototyped, and deployed a metadata-extraction system that characterizes AV drivelogs before full extraction, enabling teams to query \textasciitilde{}1~TB drivelogs (petabyte-scale corpus) without processing the raw logs --- delivered a staging PoC and authored the production design.}
+        \resumeItem{Architected the production system as a \textbf{medallion architecture} to stand it up as a reusable, future-facing data product.}
+        \resumeItem{Enriched drivelog data with weather and map layers and used \textbf{H3 geospatial indexing} to compute area-based aggregation and rollup metrics.}
+        \resumeItem{Built novel indexing for geospatial datasets enabling fast retrieval on scene metadata, and indexed scenes via embeddings for similarity search --- \textbf{filed a provisional patent} for the approach.}
+        \resumeItem{Augmented the platform with an \textbf{agentic AI pipeline (LangGraph)} for natural-language drivelog retrieval via tool calls, served through a \textbf{FastAPI} backend.}
+        \resumeItem{Benchmarked \textbf{Ray Data pipelines vs. Spark} on Kubernetes; final design used Ray with AWS EventBridge, S3, and RDS.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Phenom}{Product Development Engineer, Enterprise Talent Graph}
+      {Hyderabad, India}{Dec 2023 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{Led a team of six engineers to re-architect a multi-tenant AI analytics platform, enhancing scalability and reliability under concurrent tenant load by refactoring shared services and reducing cross-tenant coupling.}
+        \resumeItem{Scaled a production knowledge graph to 1M+ entities with continuous ingestion, by designing validated aggregation pipelines integrated with Neo4j graph schemas and Iceberg versioned storage.}
+        \resumeItem{Ensured high availability for workloads serving 100+ enterprise clients, by managing distributed Kafka, PostgreSQL, and Redis clusters and building CI/CD pipelines using Jenkins and Helm charts on Kubernetes.}
+        \resumeItem{Accelerated AI-driven query response times by 40\% across 100+ clients, by tuning PostgreSQL horizontal sharding strategies.}
+        \resumeItem{Owned the full Kafka platform: built a custom Kafka exporter (shell scripting + Prometheus scraping) and Kafka UI for cluster management, giving the team live visibility into partitioning, rebalancing, consumer-lag, and node failures; led the migration of Kafka from ZooKeeper to \textbf{KRaft}.}
+        \resumeItem{Pioneered running Redis and other databases on Kubernetes for elastic scaling, and owned the Helm charts that made those deployments repeatable.}
+        \resumeItem{Member of the \textbf{central crypto team}: implemented encryption at rest and owned key management/rotation via AWS KMS; helped build \textbf{Bring-Your-Own-Key (BYOK)} support for EU customers.}
+        \resumeItem{Enforced \textbf{GDPR data-retention} policies across data products, managing PII safety and guaranteed deletion.}
+        \resumeItem{Redesigned and rewrote a \textbf{proxy service in Go}, reducing startup time and \textbf{increasing throughput by 30\%}; implemented Docker Compose integration-testing pipelines.}
+        \resumeItem{Benchmarked datastores (ScyllaDB, Cassandra, PostgreSQL, Citus) and built RAG pipelines over related graph entities; deployed and maintained OpenReplay for UI-behavior heatmaps and product insights; negotiated long-term Neo4j licensing.}
+        \resumeItem{\textit{Recognition:} Phenomenal Award for Outstanding Performance (both Q1 and Q2, 2024).}
+      \resumeItemListEnd
+    \resumeSubheading
+      {BYJU'S}{Software Engineer, Core Platform Team}
+      {Hyderabad, India}{Jul 2022 -- Dec 2023}
+      \resumeItemListStart
+        \resumeItem{Cut infrastructure costs by 70\% while maintaining reliability for 1M+ users, by deploying scheduled AWS ECS auto-scaling policies (Terraform-authored IaC) based on user traffic patterns.}
+        \resumeItem{Eliminated dependency on external identity services by 50\%, by leading development of an in-house authentication and authorization platform using Go and Java (Spring Boot).}
+        \resumeItem{Led an internal \textbf{SSO} project end-to-end --- implementing SAML, SSO, and RBAC so every inter-service call was authenticated, authorized, and traceable --- while mentoring and leading interns.}
+        \resumeItem{Built a \textbf{multi-channel communications platform} with real-time targeting that tracked exact communication volume, enabling reconciliation that \textbf{saved at least \$100K} and \textbf{boosted user engagement by 20\%}.}
+        \resumeItem{Ran load testing on target APIs that \textbf{cut latency by 30\%}; engineered an in-house CRM backend in Java (Spring Boot), delivered end-to-end within two months.}
+        \resumeItem{Held admin over 5 repositories as a fresher and owned the full auth + comms flow; survived 7 rounds of layoffs through the company's decline, a signal of critical ownership.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Phenom}{Machine Learning Intern}
+      {Hyderabad, India}{May 2021 -- Jun 2022}
+      \resumeItemListStart
+        \resumeItem{Boosted recommendation accuracy by building persona classification models using NLP (spaCy, BERT embeddings) across 3 data sources, serving personalized content for production recommendation pipelines.}
+        \resumeItem{Accelerated recommender feature preprocessing by migrating CPU pipelines to NVTabular on GPU, reducing latency and validating scalability across 2 production databases.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Publications \& Research}
+  \resumeItemListStart
+    \resumeItem{\textbf{FLARE: Fast Low-rank Attention Routing Engine} --- V. Puri, A. Joglekar, \textbf{S. D. G. Bandreddi}, K. Ferguson, Y. Chen, Y. J. Zhang, L. B. Kara. arXiv:2508.12594; submitted to TMLR (\textit{3rd author}). Later adopted by an NVIDIA $\times$ General Motors crash-dynamics effort (arXiv:2605.27758) via a FLARE-based GeoTransolver backbone on NVIDIA PhysicsNeMo ($\sim$2$\times$ memory reduction).}
+    \resumeItem{\textbf{FLARE++: Low-rank Attention with Dynamic Attention Routing} --- arXiv:2608.11519, ongoing, targeting ICLR 2026 (\textit{2nd author}). Improves latent-token routing over FLARE.}
+    \resumeItem{\textbf{Comparative FEA Study of Palatal Expansion Devices} --- \textbf{S. D. Bandreddi}, V. Vaidya, R. R. Salguti, R. Uddanwadiker. Presented at ICMAE 2022, Bratislava, Slovakia (\textit{first author}).}
+  \resumeItemListEnd
+
+%-----------PROJECTS-----------
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{FLARE / Efficient Attention} (CMU Research)}{Aug 2025 -- Present}
+        \resumeItemListStart
+          \resumeItem{Validated $>$200$\times$ speedups and sub-quadratic memory scaling for linear attention on Long Range Arena (1k--8k tokens); profiled multi-GPU NCCL training across FP8/BF16 with Nsight Systems on Slurm.}
+          \resumeItem{Owned the LRA benchmark suite and latent-expression ablations; extended FLARE to image classification and diffusion, including all architecture changes and GPU image data pipelines (NVIDIA DALI).}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{FLARE++, Dynamic Attention Routing} (CMU Research)}{Ongoing}
+        \resumeItemListStart
+          \resumeItem{Ran token-mixer ablations (AB-UPT vs. FLARE) on DrivAerML and PDEBench to evaluate dynamic attention routing and isolate which design components drive accuracy/efficiency gains.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{CT-Transformer, Vision Transformers} (CMU)}{Sep 2025 -- Dec 2025}
+        \resumeItemListStart
+          \resumeItem{Achieved 96.22\% macro AUC-ROC on 15-class VinBigData chest X-ray classification, outperforming ResNet-50, EfficientNet-B3, and ViT baselines, with a 210M-parameter Swin Transformer and fused attention kernels.}
+          \resumeItem{Optimized inference latency 3$\times$ over PyTorch eager by converting to TensorRT (FP16/INT8), accelerating preprocessing with DALI, and deploying on Triton with adaptive batching.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Distributed LLM Fine-Tuning with Megatron-LM} (CMU)}{Aug 2025 -- Oct 2025}
+        \resumeItemListStart
+          \resumeItem{Fine-tuned a 7B-parameter LLM with stable convergence and \textasciitilde{}40\% reduced memory on 4$\times$ H100 GPUs, via tensor/pipeline parallelism (NCCL), gradient checkpointing, and LoRA/QLoRA adapters.}
+          \resumeItem{Achieved 2.1$\times$ training throughput over naive data parallelism by tuning NCCL, gradient bucketing, and optimizer-state sharding.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{EMG Hand Gesture Recognition} (CMU)}{Sep 2025 -- Oct 2025}
+        \resumeItemListStart
+          \resumeItem{Built PyTorch LSTM/CNN + attention models for EMG hand-gesture classification, achieving 85--92\% accuracy on 16-channel, 1000~Hz signals, with controlled ablations over subject-wise splits.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{GitAsk, Local-First RAG over GitHub Repos} (Open Source)}{}
+        \resumeItemListStart
+          \resumeItem{Core contributor to a browser-based tool that turns any repo into a conversational assistant with an in-browser LLM (no backend). Implemented \textbf{BM25} sparse retrieval for hybrid search, embeddings (MiniLM), security hardening (encrypted key vault), and performance optimization.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{AI-Driven Knowledge Graph for Obsidian} (Personal)}{Jul 2024 -- Present}
+        \resumeItemListStart
+          \resumeItem{Auto-links notes by extracting entities/relationships with spaCy and BERT, with real-time graph clustering (NetworkX) and D3.js visualization.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Go Lopper (URL Shortener)} \& \textbf{Trello Clone} (Personal)}{}
+        \resumeItemListStart
+          \resumeItem{Go Lopper: URL shortener in Go using ULID keys in PostgreSQL for scalable inserts, Redis caching, Docker-deployable. Trello Clone: Next.js + Appwrite to-do app with drag-and-drop, GPT-API task summaries, and Google auth.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Comparative FEA of Palatal Expansion Devices} (B.Tech Capstone)}{2022}
+        \resumeItemListStart
+          \resumeItem{Conducted FEA comparing MARPE and HYRAX devices, modeling skull stress/displacement with suture lines; showed MARPE's superior stress reduction. Accepted for presentation at ICMAE 2022 (first author).}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{Awards \& Honors}
+  \resumeItemListStart
+    \resumeItem{\textbf{Phenomenal Award for Outstanding Performance} --- Phenom, Hyderabad (2024), for exceptional contributions in Q1 and Q2.}
+    \resumeItem{\textbf{Perfect GPA} --- 4.00/4.00 at Carnegie Mellon University.}
+    \resumeItem{\textbf{TartanHacks track winner} (early 2026) --- built a playable game representing CMU in under 15~KB total.}
+    \resumeItem{\textbf{Provisional patent} (Motional, 2026) --- geospatial indexing / retrieval for AV scene metadata.}
+  \resumeItemListEnd
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Extracurricular}
+  \resumeItemListStart
+    \resumeItem{\textbf{Student Mentor}, VNIT (2020--2022) --- mentored \textasciitilde{}120 first-year Mechanical Engineering students.}
+    \resumeItem{\textbf{Student Council Representative}, VNIT (2018--2022) --- represented the student body to faculty and improved course plans.}
+    \resumeItem{Organizing Committee, Aarohi (VNIT cultural fest, 2018); active member of the Cycling and Quiz clubs; district-level badminton (2019).}
+    \resumeItem{\textbf{Languages:} English (Proficient), Hindi (Fluent), Telugu (Native), German (Basic).}
+  \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}
