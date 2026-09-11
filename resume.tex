@@ -27,7 +27,7 @@
 \newcommand{\resumespaceafterhead}{-5pt}
 \newcommand{\resumespaceinitem}{-2pt}
 \newcommand{\resumespaceaftersubitem}{-4pt}
-\newcommand{\resumeitemsep}{1pt}
+\newcommand{\resumeitemsep}{0pt}
 \newcommand{\resumetopsepstd}{1pt}
 \newcommand{\resumetopsepdetail}{3pt}
 \newcommand{\resumespaceafterbullets}{-5pt}
@@ -128,7 +128,8 @@
 \begin{document}
 
 \begin{center}
-    \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{\resumeskillsgap}
+    \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{2pt}
+    {\small Data \& Platform Engineer $|$ petabyte-scale pipelines, distributed systems, and cost-efficient infrastructure} \\ \vspace{\resumeskillsgap}
     \small \href{mailto:cosmobean@cmu.edu}{\underline{cosmobean@cmu.edu}}
     \textbullet\ (412) 284-8386 \textbullet\
     \href{http://linkedin.com/in/sri-datta-bandreddi}{\underline{linkedin.com/in/sri-datta-bandreddi}}
@@ -151,12 +152,12 @@
 %-----------SKILLS-----------
 \section{SKILLS}
 {\small
-\noindent \textbf{Languages:} Python, C++, Go, Java, SQL, Bash /Shell Scripting \\
-\textbf{GPU (Acceleration):} CUDA, cuDNN, cuBLAS, TensorRT, Triton Inference Server, NCCL, Nsight Systems/Compute \\
-\textbf{DL Frameworks:} PyTorch, JAX, TensorFlow, HF, NeMo/Megatron-LM, LoRA/QLoRA, FP8/BF16 Mixed Precision \\
-\textbf{Data \& ETL:} Rapids (cuDF, cuML), NVTabular, DALI, NumPy, SciPy, Pandas, SparkML \\
-\textbf{Systems \& MLOps:} Docker, Kubernetes, Slurm, Jenkins/GitHub Actions, MLflow, Git, AWS (ECS, SageMaker), GCP \\
-\textbf{Data Infrastructure:} PostgreSQL, Neo4j, Kafka, Redis, Iceberg, Elasticsearch, FAISS, MongoDB
+\noindent \textbf{Languages:} Python, Go, Java (Spring Boot), C++, SQL, Bash /Shell Scripting \\
+\textbf{Data \& ETL:} Ray (Data), Spark/SparkML, Iceberg, Airflow, NVTabular, Rapids (cuDF, cuML), Pandas, NumPy \\
+\textbf{Databases:} PostgreSQL, Neo4j, JanusGraph, Cassandra, MongoDB, Redis, Kafka, Elasticsearch, FAISS \\
+\textbf{Systems \& MLOps:} Docker, Kubernetes, Terraform, Helm, Jenkins/GitHub Actions, AWS (S3, RDS, ECS, EventBridge), GCP \\
+\textbf{Observability:} Prometheus, Grafana, OpenTelemetry, Nsight Systems, MLflow \\
+\textbf{ML \& DL:} PyTorch, TensorFlow, Hugging Face, LangGraph, LoRA/QLoRA
 \par}
 \vspace{\resumeskillsgap}
 
@@ -169,18 +170,18 @@
       {MOTIONAL}{Pittsburgh, PA}
       {Data Platform Intern (Infrastructure)}{May 2026 - Aug 2026}
       \resumeExperienceItemListStart
-        \resumeItem{Enabled characterization of petabyte-scale drivelog data before thawing, by architecting and delivering a metadata-extraction system from PoC to production on a medallion architecture}
-        \resumeItem{Accelerated scene-metadata retrieval and earned a provisional patent, by building an H3 geospatial index and scene embeddings for similarity search}
-        \resumeItem{Delivered natural-language drivelog search and selected the production stack, by building an agentic LangGraph service on FastAPI and benchmarking Ray Data against Spark on Kubernetes}
+        \resumeItem{Cut drivelog thaw costs by about \$100K/month, by architecting a metadata-extraction platform (PoC to production on a medallion architecture) that answers characterization queries on petabyte-scale logs without thawing from cold storage}
+        \resumeItem{Selected and shipped the production data stack, by benchmarking Ray Data against Spark on Kubernetes and building ingestion pipelines on AWS S3, RDS, and EventBridge}
+        \resumeItem{Accelerated region-level analytics and enabled precise, timeboxed thawing of long-tail events, by enriching drivelogs with weather and map layers and building H3 geospatial rollups}
       \resumeExperienceItemListEnd
 
     \resumeExperienceSubheading
       {PHENOM}{Hyderabad, India}
       {Product Development Engineer (Enterprise Talent Graph)}{Dec 2023 - Jul 2025}
       \resumeExperienceItemListStart
-        \resumeItem{Hardened a multi-tenant AI analytics platform for reliability under concurrent load, by leading six engineers to refactor shared services and reduce cross-tenant coupling}
-        \resumeItem{Scaled a production knowledge graph past 1M entities with continuous ingestion, by designing validated aggregation pipelines on Neo4j schemas and Iceberg versioned storage}
-        \resumeItem{Cut AI-driven query response time by 40\% across 100+ clients, by tuning PostgreSQL sharding and hardening the Kafka platform (custom exporter, Kafka UI, ZooKeeper-to-KRaft migration)}
+        \resumeItem{Scaled a production ontology-driven knowledge graph to 1M+ entities with continuous ingestion, by designing validated aggregation pipelines on Neo4j graph schemas and Iceberg versioned storage}
+        \resumeItem{Ensured high availability for workloads serving 100+ enterprise clients, by managing distributed Kafka, PostgreSQL, and Redis clusters and building CI/CD pipelines with Jenkins and Helm charts on Kubernetes}
+        \resumeItem{Benchmarked 8 databases for knowledge-graph workloads and cut AI-driven query response time by 40\%, by evaluating scalability and storage efficiency and tuning PostgreSQL horizontal sharding}
       \resumeExperienceItemListEnd
 
     \resumeExperienceSubheading
@@ -195,8 +196,8 @@
       {PHENOM}{Hyderabad, India}
       {Machine Learning Intern}{May 2021 - Jun 2022}
       \resumeExperienceItemListStart
-        \resumeItem{Boosted recommendation accuracy for production pipelines, by building persona-classification models with spaCy and BERT embeddings across 3 data sources}
-        \resumeItem{Cut recommender preprocessing latency, by migrating CPU pipelines to NVTabular on GPU across 2 production databases}
+        \resumeItem{Cut recommender preprocessing latency, by migrating CPU data pipelines to NVTabular on GPU and validating scalability across 2 production databases}
+        \resumeItem{Streamlined database migration and testing, by building reusable database package clients that standardized DB query interfaces across services}
       \resumeExperienceItemListEnd
   \resumeSubHeadingListEnd
 
