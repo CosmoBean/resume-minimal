@@ -27,7 +27,7 @@
 \newcommand{\resumespaceafterhead}{-5pt}
 \newcommand{\resumespaceinitem}{-2pt}
 \newcommand{\resumespaceaftersubitem}{-4pt}
-\newcommand{\resumeitemsep}{1pt}
+\newcommand{\resumeitemsep}{0pt}
 \newcommand{\resumetopsepstd}{1pt}
 \newcommand{\resumetopsepdetail}{3pt}
 \newcommand{\resumespaceafterbullets}{-5pt}
@@ -128,7 +128,8 @@
 \begin{document}
 
 \begin{center}
-    \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{\resumeskillsgap}
+    \textbf{\LARGE \scshape Sri Datta Ganesh Bandreddi} \\ \vspace{2pt}
+    {\small Machine Learning Engineer $|$ deep learning, model training \& optimization, and GPU acceleration} \\ \vspace{\resumeskillsgap}
     \small \href{mailto:cosmobean@cmu.edu}{\underline{cosmobean@cmu.edu}}
     \textbullet\ (412) 284-8386 \textbullet\
     \href{http://linkedin.com/in/sri-datta-bandreddi}{\underline{linkedin.com/in/sri-datta-bandreddi}}
@@ -152,8 +153,8 @@
 \section{SKILLS}
 {\small
 \noindent \textbf{Languages:} Python, C++, Go, Java, SQL, Bash /Shell Scripting \\
-\textbf{GPU (Acceleration):} CUDA, cuDNN, cuBLAS, TensorRT, Triton Inference Server, NCCL, Nsight Systems/Compute \\
 \textbf{DL Frameworks:} PyTorch, JAX, TensorFlow, HF, NeMo/Megatron-LM, LoRA/QLoRA, FP8/BF16 Mixed Precision \\
+\textbf{GPU (Acceleration):} CUDA, cuDNN, cuBLAS, TensorRT, Triton Inference Server, NCCL, Nsight Systems/Compute \\
 \textbf{Data \& ETL:} Rapids (cuDF, cuML), NVTabular, DALI, NumPy, SciPy, Pandas, SparkML \\
 \textbf{Systems \& MLOps:} Docker, Kubernetes, Slurm, Jenkins/GitHub Actions, MLflow, Git, AWS (ECS, SageMaker), GCP \\
 \textbf{Data Infrastructure:} PostgreSQL, Neo4j, Kafka, Redis, Iceberg, Elasticsearch, FAISS, MongoDB
@@ -169,9 +170,9 @@
       {MOTIONAL}{Pittsburgh, PA}
       {Data Platform Intern (Infrastructure)}{May 2026 - Aug 2026}
       \resumeExperienceItemListStart
-        \resumeItem{Enabled characterization of petabyte-scale drivelog data before thawing, by architecting and delivering a metadata-extraction system from PoC to production on a medallion architecture}
-        \resumeItem{Accelerated scene-metadata retrieval and earned a provisional patent, by building an H3 geospatial index and scene embeddings for similarity search}
-        \resumeItem{Delivered natural-language drivelog search and selected the production stack, by building an agentic LangGraph service on FastAPI and benchmarking Ray Data against Spark on Kubernetes}
+        \resumeItem{Earned a provisional patent and accelerated scene-metadata retrieval, by building scene embeddings and an H3-backed similarity-search index over petabyte-scale drivelogs}
+        \resumeItem{Improved training-data quality and curated a retraining flywheel, by giving annotators a metadata platform backed by alternate source-of-truth signals and selecting long-tail events for retraining}
+        \resumeItem{Cut drivelog thaw costs by about \$100K/month, by building an agentic retrieval system that answers characterization and data-selection queries from metadata without thawing from cold storage}
       \resumeExperienceItemListEnd
 
     \resumeExperienceSubheading
@@ -218,7 +219,7 @@
       \resumeProjectHeading
           {\textbf{CT-Transformer, Vision Transformers (Carnegie Mellon University)}}{Sep 2025 - Dec 2025}
           \resumeProjectItemListStart
-            \resumeItem{Reached 96.22\% macro AUC-ROC on 15-class VinBigData chest X-ray classification (beating ResNet-50, EfficientNet-B3, and ViT baselines), by training a 210M-parameter Swin Transformer}
+            \resumeItem{Reached 96.22\% macro AUC-ROC on 15-class VinBigData chest X-ray classification (beating ResNet-50, EfficientNet-B3, and ViT baselines), by training a 210M-parameter Swin Transformer with fused attention kernels}
             \resumeItem{Cut inference latency by 3x versus PyTorch eager, by converting to TensorRT (FP16/INT8), accelerating preprocessing with DALI, and serving on Triton with adaptive batching}
           \resumeProjectItemListEnd
     \resumeSubHeadingListEnd
